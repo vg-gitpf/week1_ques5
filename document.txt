@@ -1,1 +1,18 @@
-Hi thsi sis V
+#calculator.h
+In this file variables for stack and queue were declared and
+functions to initialise stack & queue and their some basic functions like peek, empty, enqueue, dequeue
+
+#calculator.c
+First it defines all the specific functions of stack and queue then it defined 
+int get_op_precedence(char op){} which sets res according to precedence of operators
+void shunting_yard(const char* input, simple_stack_t* ops, simple_queue_t* output){} 
+The shunting_yard function efficiently converts infix expressions to postfix notation, handling operators, parentheses, 
+and numbers while ensuring the output respects mathematical precedence and associativity rules. Now this can be solved using 
+some stack algorithm.
+byte_8 compute_rpn(simple_queue_t *q){} 
+The compute_rpn function evaluates an expression given in Reverse Polish Notation (RPN), also known as postfix notation.
+RPN is a mathematical notation where every operator follows all of its operands, which allows for expressions to be 
+evaluated without needing to consider operator precedence or parentheses.
+
+#main.c
+It is the final file which first include calculator.h then in int main() initialize queue & stack then executes shunting_yard and compute_rpm.
